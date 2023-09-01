@@ -113,7 +113,7 @@ impl FromWorld for KernelPipeline {
 #[derive(Resource, AsBindGroup, Debug, Clone, ExtractResource)]
 pub struct MyNumbers {
     #[storage(0, visibility(compute))]
-    number: Vec<u32>,
+    number: Vec<i32>,
 }
 
 #[derive(Debug, Resource)]
