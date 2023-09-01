@@ -138,6 +138,7 @@ fn prepare_my_numbers(
             commands.insert_resource(KernelBindGroup(prepared_numbers.bind_group));
         }
         Err(AsBindGroupError::RetryNextUpdate) => {
+            println!("retry next update");
             // we are retrying every frame regardless
         }
     }
