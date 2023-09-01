@@ -167,6 +167,7 @@ impl Node for DispatchKernel {
             if let Some(real_pipeline) =
                 pipeline_cache.get_compute_pipeline(kernel_pipeline.pipeline)
             {
+                println!("dispatch happening");
                 pass.set_pipeline(&real_pipeline);
                 pass.set_bind_group(0, &kernel_bind_group.0, &[]);
                 pass.dispatch_workgroups(1, 1, 1);
